@@ -124,7 +124,7 @@ def main(sgf_file, gif_file, size, prange, duration, final, numbers):
     Usage: sgf2gif [OPTIONS] SGF_FILE GIF_FILE
     """
 
-    # Grab the file and print out some props    
+    # Grab the file and print out some props
     print(f'SGF file: {sgf_file.name}')
     game = sgf.Sgf_game.from_bytes(sgf_file.read())
     props = {k:game.root.get(k) if game.root.has_property(k) else None for k in PROPS}
